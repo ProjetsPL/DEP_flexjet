@@ -1,0 +1,40 @@
+$gutter-width: 30px;
+
+$outer-margin-xs: 30px;
+$outer-margin-sm: 30px;
+$outer-margin-md: 30px;
+$outer-margin-lg: 30px;
+$outer-margin-xl: 60px;
+
+$gutter-compensation: ($gutter-width * 0.5) * -1;
+$half-gutter-width: $gutter-width * 0.5;
+
+$sm-min: 600;
+$md-min: 900;
+$lg-min: 1200;
+$xl-min: 1500;
+
+$screen-sm-min: $sm-min + "px";
+$screen-md-min: $md-min + "px";
+$screen-lg-min: $lg-min + "px";
+$screen-xl-min: $xl-min + "px";
+
+$container-sm: $sm-min + $gutter-width;
+$container-md: $md-min + $gutter-width;
+$container-lg: $lg-min + $gutter-width;
+$container-xl: $xl-min + $gutter-width;
+
+// $brake-sm: $sm-min + $gutter-width + (2 * $outer-margin-sm);
+// $brake-md: $md-min + $gutter-width + (2 * $outer-margin-md);
+// $brake-lg: $lg-min + $gutter-width + (2 * $outer-margin-lg);
+// $brake-xl: $xl-min + $gutter-width + (2 * $outer-margin-xl);
+
+$brake-sm: $container-sm + $gutter-width; //660
+$brake-md: $container-md + $gutter-width; //960
+$brake-lg: $container-lg + $gutter-width; //1260
+$brake-xl: $container-xl + $gutter-width; //1560
+
+$sm-screen: screen and (min-width: $brake-sm);
+$md-screen: screen and (min-width: $brake-md);
+$lg-screen: screen and (min-width: $brake-lg);
+$xl-screen: screen and (min-width: $brake-xl);
